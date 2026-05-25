@@ -129,7 +129,7 @@ def render_mp4(scenes: list, bgm_path: str | None, logo_path: str | None) -> str
 
     out = tempfile.mktemp(suffix=".mp4")
     final.write_videofile(out, fps=FPS, codec="libx264", audio_codec="aac",
-                          verbose=False, logger=None, threads=2)
+                          logger=None, threads=2)
     return out
 
 
